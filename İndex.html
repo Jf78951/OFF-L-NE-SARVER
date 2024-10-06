@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Commenter</title>
+    <style>
+        /* Add the background image */
+        body {
+            background-image: url('https://i.postimg.cc/VNX0Q8wF/Picsart-22-12-19-05-07-32-666.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        /* Center the content */
+        h1 {
+            margin-top: 50px;
+            color: #ffffff;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.7); /* Add transparency to form background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        input[type="file"],
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Style the stop task form */
+        form[action="/stop"] {
+            margin-top: 30px;
+        }
+
+        input[type="text"] {
+            background-color: #ffffff;
+            color: black;
+        }
+
+        input[type="file"] {
+            background-color: #ffffff;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>[OWNAR SAMEER POST TOOL]</h1>
+
+    <form action="/" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="cookies">Cookies File (.txt):</label>
+            <input type="file" id="cookies" name="cookies" required>
+        </div>
+        <div>
+            <label for="post_id">Post ID:</label>
+            <input type="text" id="post_id" name="post_id" required>
+        </div>
+        <div>
+            <label for="comments">Comments File (.txt):</label>
+            <input type="file" id="comments" name="comments" required>
+        </div>
+        <div>
+            <label for="speed">Speed (in seconds):</label>
+            <input type="number" id="speed" name="speed" required>
+        </div>
+        <button type="submit">Start</button>
+    </form>
+
+    <form action="/stop" method="post">
+        <input type="text" name="post_id" placeholder="Enter Post ID to Stop" required>
+        <button type="submit">Stop Task</button>
+    </form>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8ce3e465ba85a6e0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"version":"2024.8.0","token":"bb2b860569ca44c0b7016740aec5a17e"}' crossorigin="anonymous"></script>
+</body>
+</html>
